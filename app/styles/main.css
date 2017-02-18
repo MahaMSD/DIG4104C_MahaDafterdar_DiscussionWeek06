@@ -1,29 +1,372 @@
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+/* --- navigation --- */
+nav {
+  background-color: transparent;
+  box-shadow: none;
 }
 
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+nav a i#fixside {
+  color: #ffffff;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
+nav a img#mylogo {
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
-.hero-unit h1 {
+nav ul li a {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: #02020a;
+}
+
+nav ul.side-nav li a:hover {
+  text-decoration: underline;
+  background-color: rgba(64, 64, 64, 0.5);
+  color: #ffffff;
+}
+
+/*-- contact me section -- */
+div#contactsection {
+  border: 1px solid #eeeeee;
+  padding: 25px;
+  background-color: rgba(250, 250, 250, 0.4);
+}
+
+div#contactsection form i {
+  color: #ffffff;
+}
+
+div#contactsection form label {
+  color: #555555;
+}
+
+div#contactsection form button {
+  background-color: #ef233c;
+}
+
+/* --------- style for the scrolling page --------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* vertical scroll */
+body{
+    background:#000000;
+    font-family: Helvetica;
+}
+
+/* vertical */
+.section{
+    margin:0px;
+    height:1000px;
+    width:100%;
+    float:left;
+}
+
+.section h1 {
+  padding-top: 200px;
+  font-weight: bold;
   font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
+  margin: 0px;
+  color: #ef233c;
+  text-align: center;
+  padding-bottom: 10px;
+  text-transform: uppercase;
 }
+
+.section hr {
+  color: #2d2d34;
+  width: 60%;
+  margin: auto;
+}
+
+.section h2#homeh2 {
+  font-weight: normal;
+  font-size: 35px;
+  color: #edf2f4;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.section h2 {
+    padding-top: 30px;
+    font-weight: bold;
+    font-size: 34px;
+    margin: 50px 0px 30px 50px;
+    color: #ef233c;
+    text-align: center;
+}
+
+.section p {
+    font-size: 26px;
+    line-height: 33px;
+    color: #2d2d34;
+}
+
+.section p#firsthome {
+    margin-top: 20px;
+    margin-bottom: 200px;
+}
+
+.section div#centerd3 {
+    margin: 20px 0px 0px 50px;
+    width: 600px;
+}
+
+.home {
+  color: #ffffff;
+  background-image: url(../images/homeimg03.jpg);
+  background-repeat: none;
+  background-size: cover;
+  margin-top: -75px;
+}
+
+.whitesec {
+    color: #ffffff;
+    background-color: #edf2f4;
+}
+
+.goldsec {
+    color:#000000;
+    background-color: #a89b9d;
+}
+
+/* ----------- end of style for the scrolling ------------- */
+
+/* ----------- typing effect and text --------------------- */
+.container {
+  max-width: 90%;
+  z-index: 1;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.textContainer {
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.15vw;
+  line-height: 1.05;
+  min-height: 88vh;
+}
+
+.jstext {
+  width: 100%;
+  padding-top: 0px;
+  padding-right: 50px;
+}
+.jstext:after {
+  content: "_";
+  animation: sliding 2s 0.3s 1 forwards, blinking 2s 2s infinite forwards;
+  position: absolute;
+  transform: translate(10%, -10%);
+  overflow: hidden;
+  width: 0px;
+}
+
+.text {
+  color: #46200A;
+}
+
+#brName {
+  display: none;
+}
+
+@keyframes sliding {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* -------------------------------
+     MEDIA QUERIES 
+----------------------------------*/
+@media all and (max-width: 1024px) {
+  .textContainer {
+    min-height: 75vh;
+  }
+}
+@media all and (max-width: 768px) {
+  #brName {
+    display: block;
+  }
+
+  .textContainer {
+    min-height: 80vh;
+    font-size: 40px;
+  }
+
+  .jstext {
+    padding-right: 0px;
+  }
+}
+@media all and (max-width: 468px) {
+  .textContainer {
+    min-height: 80vh;
+    font-size: 30px;
+  }
+
+  .jstext {
+    padding-right: 0px;
+  }
+}
+
+
+/* ----------- end of typing effect ----------------------- */
+
+/* ----------- style for the d3 animated chart ------------ */
+label {
+  color: #000000;
+}
+
+.t2 { 
+    font-size: 150%; 
+}
+
+/*float*/
+.fl { 
+    float: left; 
+}
+
+.fr { 
+    float: right; 
+}
+
+.fn { 
+    float: none; 
+}
+
+.title { 
+    padding-left: 260px;
+}
+
+.y-axis path {
+  fill: none;
+  stroke: none;
+}
+
+.y-axis line, .string,
+.x-axis path, .x-axis line {
+  fill: none;
+  stroke: #a1a1a1;
+  shape-rendering: crispEdges;
+}
+
+.xLabel, .value { 
+    text-anchor: middle; 
+}
+
+.y-unit {
+  alignment-baseline: middle;
+}
+
+.y-unit-right {
+  text-anchor: end;
+}
+
+.wide-tick line {
+  stroke-width: 7px;
+}
+
+.numb, .y-axis text, .x-axis text {
+  pointer-events: none;
+}
+
+.brush .extent {
+  stroke: #FFF;
+  shape-rendering: crispEdges;
+  fill: #E6E7E8;
+  opacity: 1.0;
+}
+
+.clickable {
+  cursor: hand;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+text { 
+    font-size: 12px; 
+}
+
+.ctext { 
+    text-align: "middle";
+}
+
+.hide { 
+    display: none; 
+}
+
+.dbg-vis-border {
+  border: #797979 solid 1px;
+}
+
+.dbg-svg-green {
+  fill: #00ff00;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* layout stuff */
+.mt1 {
+  margin-top: 25px;
+}
+
+.pt1 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.pr2 {
+  padding-right: 30px;
+}
+
+.ml2 {
+  margin-left: 40px;
+}
+
+
+/* option 2 */
+#chart-container {
+  padding: 20px;
+}
+
+.horizontal-bar {
+  fill: #2d2d34;
+}
+/* ----------- end of style for the animated d3 chart ------------ */
+        
